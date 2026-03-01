@@ -12,8 +12,8 @@ services:
       MYSQL_CHARACTER_SET_SERVER: utf8mb4
       MYSQL_COLLATION_SERVER: utf8mb4_general_ci
       TZ: Asia/Shanghai
-    ports:
-      - "3306:3306"
+    # ports:
+    #   - "3306:3306"  # 如需外部连接数据库可取消注释（注意本地MySQL需先停止）
     volumes:
       - mysql_data:/var/lib/mysql
       - ./sql/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
