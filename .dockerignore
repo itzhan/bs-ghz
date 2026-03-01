@@ -1,0 +1,33 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.iml
+
+# Docs
+*.docx
+*.doc
+*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backend
+backend/target
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# Node
+**/node_modules
+**/dist
+
+# Logs & PIDs
+.logs
+.pids
+*.log
+
+# Docker
+docker-compose.yml
