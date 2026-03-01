@@ -1,0 +1,142 @@
+/* ===== 登录页 - 简洁校园餐饮主题 ===== */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  background: #f0f2f5;
+}
+
+/* ---------- 登录卡片 ---------- */
+.login-card {
+  position: relative;
+  display: flex;
+  width: 820px;
+  min-height: 460px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.dark-switch {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+}
+
+/* ---------- 左侧品牌 ---------- */
+.brand-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, #ff7e29 0%, #ff9a44 100%);
+  padding: 40px;
+}
+
+.brand-content {
+  text-align: center;
+  color: #fff;
+}
+
+.brand-icon {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.brand-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  letter-spacing: 2px;
+}
+
+.brand-desc {
+  font-size: 14px;
+  opacity: 0.85;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* ---------- 右侧表单 ---------- */
+.form-section {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 36px;
+}
+
+.form-header {
+  margin-bottom: 32px;
+}
+
+.form-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* ---------- 表单样式 ---------- */
+.form-section {
+  .el-form-item {
+    margin-bottom: 24px;
+  }
+
+  .el-input {
+    --el-input-border-radius: 8px;
+  }
+
+  .login-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 4px;
+
+    .el-button {
+      width: 100%;
+      height: 44px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .el-button--primary {
+      background: linear-gradient(135deg, #ff7e29, #ff9a44);
+      border: none;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+/* ---------- 响应式 ---------- */
+@media screen and (width <=900px) {
+  .brand-section {
+    display: none;
+  }
+
+  .login-card {
+    width: 400px;
+  }
+}
+
+@media screen and (width <=480px) {
+  .login-card {
+    width: 94%;
+    border-radius: 12px;
+  }
+
+  .form-section {
+    width: 100%;
+    padding: 36px 24px;
+  }
+}
