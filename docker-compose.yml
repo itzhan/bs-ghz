@@ -1,4 +1,4 @@
-version: '3.8'
+name: campus-dining
 
 services:
   # ======================== MySQL 数据库 ========================

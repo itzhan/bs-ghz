@@ -187,7 +187,7 @@ function handleSearch() {
 async function loadStalls() {
   loading.stalls = true
   try {
-    const res: any = await getStalls({ page: 1, pageSize: 6 })
+    const res: any = await getStalls({ page: 1, size: 6 })
     if (res.code === 200 || res.code === 0) {
       stalls.value = res.data?.records || res.data?.list || res.data || []
     }
@@ -201,7 +201,7 @@ async function loadStalls() {
 async function loadDishes() {
   loading.dishes = true
   try {
-    const res: any = await getDishes({ page: 1, pageSize: 8 })
+    const res: any = await getDishes({ page: 1, size: 8 })
     if (res.code === 200 || res.code === 0) {
       dishes.value = res.data?.records || res.data?.list || res.data || []
     }

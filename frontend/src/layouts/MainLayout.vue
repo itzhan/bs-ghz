@@ -12,7 +12,7 @@
             <router-link to="/" class="nav-link" :class="{ active: route.path === '/' }">首页</router-link>
             <router-link to="/stalls" class="nav-link" :class="{ active: route.path.startsWith('/stalls') }">档口</router-link>
             <router-link to="/dishes" class="nav-link" :class="{ active: route.path.startsWith('/dishes') }">菜品</router-link>
-            <router-link v-if="userStore.userInfo?.role === 'merchant' || userStore.userInfo?.role === 1" to="/merchant/stalls" class="nav-link" :class="{ active: route.path.startsWith('/merchant') }">档口管理</router-link>
+            <router-link v-if="userStore.userInfo?.role === 'merchant' || userStore.userInfo?.role === '1'" to="/merchant/stalls" class="nav-link" :class="{ active: route.path.startsWith('/merchant') }">档口管理</router-link>
           </nav>
         </div>
         <div class="navbar-right">
@@ -84,7 +84,7 @@ const renderIcon = (icon: any) => {
 
 const isMerchant = computed(() => {
   const role = userStore.userInfo?.role
-  return role === 'merchant' || role === 1
+  return role === 'merchant' || role === '1'
 })
 
 const userMenuOptions = computed<DropdownOption[]>(() => {

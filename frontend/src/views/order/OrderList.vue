@@ -180,7 +180,7 @@ async function loadOrders() {
     const res: any = await getOrders({
       status: statusTab.value || undefined,
       page: page.value,
-      size: pageSize.value,
+      pageSize: pageSize.value,
     })
     if (res.code === 200 || res.code === 0) {
       const data = res.data

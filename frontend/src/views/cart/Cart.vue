@@ -227,7 +227,7 @@ async function handleCheckout() {
       const orderData = {
         stallId: group.stallId,
         items: group.items.map((i) => ({ dishId: i.dishId, quantity: i.quantity })),
-        paymentMethod: paymentMethod.value,
+        paymentMethod: String(paymentMethod.value),
         remark: remark.value,
       }
       const res: any = await createOrder(orderData)

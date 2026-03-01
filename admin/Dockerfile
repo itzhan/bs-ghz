@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 COPY . .
-RUN pnpm build:pro
+RUN pnpm run build:pro || pnpm exec vite build --mode production
 
 # ==================== Stage 2: Serve ====================
 FROM nginx:alpine
